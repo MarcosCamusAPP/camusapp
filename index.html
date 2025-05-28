@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camus APP</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/camusapp.ico" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#004AAD',
+              secondary: '#F5F7FA',
+              accent: '#0075FF'
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-white text-gray-800 font-sans">
+
+<!-- Navbar -->
+<header class="bg-white fixed top-0 left-0 w-full z-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+        <div class="flex items-center space-x-3">
+            <img src="assets/img/login.png" alt="Camus APP" class="h-10">
+        </div>
+        <nav>
+            <ul class="flex space-x-8 text-sm font-medium">
+                <li><a href="#inicio" class="hover:text-primary">Início</a></li>
+                <li><a href="#quem-somos" class="hover:text-primary">Quem Somos</a></li>
+                <li><a href="#projetos" class="hover:text-primary">Soluções</a></li>
+                <li><a href="#contato" class="hover:text-primary">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero -->
+<section id="inicio" class="pt-28 pb-24 bg-secondary">
+    <div class="max-w-7xl mx-auto text-center px-6" data-aos="fade-up">
+        <h1 class="text-5xl font-bold text-primary mb-6 leading-tight">
+            Soluções sob medida <br>para transformar sua empresa
+        </h1>
+        <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Desenvolvimento de sistemas, aplicativos e dashboards inteligentes para acelerar sua transformação digital.
+        </p>
+        <a href="#contato" class="bg-primary hover:bg-accent text-white px-8 py-3 rounded-xl shadow-md transition">
+            Fale Conosco
+        </a>
+    </div>
+</section>
+
+<!-- Quem Somos -->
+<section id="quem-somos" class="py-24">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+            <h2 class="text-4xl font-bold text-primary mb-4">Quem Somos</h2>
+            <p class="text-lg text-gray-600 mb-6">
+                Somos especialistas em desenvolvimento de software sob medida, integração de dados e soluções digitais inovadoras.
+            </p>
+            <p class="text-lg text-gray-600">
+                Entregamos projetos robustos, escaláveis e pensados para as necessidades específicas de cada cliente, potencializando seus resultados.
+            </p>
+        </div>
+        <div data-aos="fade-left">
+            <img src="assets/img/quem-somos.png" alt="Quem Somos" class="rounded-xl shadow-md">
+        </div>
+    </div>
+</section>
+
+<!-- Soluções -->
+<section id="projetos" class="py-24 bg-secondary">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold text-primary mb-12" data-aos="fade-up">Nossas Soluções</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition" data-aos="fade-up">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Sistemas Web</h3>
+                <p class="text-gray-600">
+                    ERP, CRM e soluções personalizadas para gestão e automação de processos.
+                </p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Dashboards & BI</h3>
+                <p class="text-gray-600">
+                    Dashboards integrados com Power BI, para insights precisos e decisões mais inteligentes.
+                </p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Aplicativos Mobile</h3>
+                <p class="text-gray-600">
+                    Apps para Android e iOS conectados aos seus sistemas, com performance e segurança.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Depoimentos -->
+<section class="py-24">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold text-primary mb-12" data-aos="fade-up">O que dizem nossos clientes</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-right">
+                <p class="text-gray-600 italic">
+                    "A Camus APP transformou completamente nossos processos internos. O sistema ficou perfeito para nossa operação!"
+                </p>
+                <div class="mt-4 font-semibold text-primary">Carlos Silva — Empresa X</div>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-left">
+                <p class="text-gray-600 italic">
+                    "A integração dos dashboards com nossos dados foi fundamental para melhorar nossa gestão e resultados."
+                </p>
+                <div class="mt-4 font-semibold text-primary">Ana Souza — Empresa Y</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-primary py-16">
+    <div class="max-w-6xl mx-auto px-6 text-center" data-aos="zoom-in">
+        <h2 class="text-4xl font-bold text-white mb-6">Pronto para acelerar seu negócio?</h2>
+        <p class="text-lg text-gray-200 mb-8">
+            Fale com nossos especialistas e descubra como podemos ajudar sua empresa a crescer com tecnologia.
+        </p>
+        <a href="#contato" class="bg-white text-primary px-8 py-3 rounded-xl shadow hover:bg-gray-100 transition">
+            Fale Conosco
+        </a>
+    </div>
+</section>
+
+<!-- Contato -->
+<section id="contato" class="py-24">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold text-primary mb-6">Entre em Contato</h2>
+        <p class="text-lg text-gray-600 mb-8">
+            contato@camusapp.com.br
+        </p>
+        <a href="mailto:contato@camusapp.com.br" class="bg-primary hover:bg-accent text-white px-8 py-3 rounded-xl shadow-md transition">
+            Enviar E-mail
+        </a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-primary text-white py-6">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="text-center md:text-left">
+            &copy; 2025 Camus APP. Todos os direitos reservados.
+        </div>
+        <div class="flex space-x-6">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/company/camusapp" target="_blank" class="hover:text-gray-300" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
+                    <path d="M4.98 3.5a2.5 2.5 0 112.5 2.5 2.5 2.5 0 01-2.5-2.5zM2 8.98h6v13.02H2zM9.5 8.98H15v2.64h.09c.89-1.69 3.07-2.64 5.09-2.64 5.45 0 6.41 3.59 6.41 8.26v9.75h-6v-8.64c0-2.06-.04-4.7-3-4.7-3 0-3.46 2.26-3.46 4.58v8.76h-6z"/>
+                </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/camus.app/" target="_blank" class="hover:text-gray-300" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
+                    <path d="M7.75 2A5.75 5.75 0 002 7.75v8.5A5.75 5.75 0 007.75 22h8.5A5.75 5.75 0 0022 16.25v-8.5A5.75 5.75 0 0016.25 2h-8.5zM12 7.25a4.75 4.75 0 110 9.5 4.75 4.75 0 010-9.5zm0 1.5a3.25 3.25 0 100 6.5 3.25 3.25 0 000-6.5zM17.75 6a1 1 0 110 2 1 1 0 010-2z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+</script>
+
+</body>
+</html>
