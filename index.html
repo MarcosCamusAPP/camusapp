@@ -27,6 +27,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Estilos para o menu hambúrguer */
+        @media (max-width: 767px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: white;
+                position: absolute;
+                top: 64px; /* Altura do cabeçalho */
+                left: 0;
+                border-bottom: 1px solid #e5e7eb;
+                padding-bottom: 1rem;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-links li {
+                text-align: center;
+                margin-top: 0.5rem;
+            }
+            .nav-links li a {
+                display: block;
+                padding: 0.5rem 0;
+            }
+            .hamburger-button {
+                display: block;
+            }
+            .header-nav {
+                display: none; /* Esconde a navegação padrão em telas pequenas */
+            }
+        }
+        @media (min-width: 768px) {
+            .hamburger-button {
+                display: none;
+            }
+            .header-nav {
+                display: block;
+            }
+        }
+    </style>
 </head>
 
 <body class="bg-white text-gray-800 font-sans">
@@ -38,11 +79,17 @@
                 <img src="assets/img/login.png" alt="Camus APP" class="h-10">
             </a>
         </div>
-        <nav>
-            <ul class="flex space-x-8 text-sm font-medium">
+        <!-- Botão Hambúrguer para Mobile -->
+        <button id="hamburger" class="hamburger-button text-gray-800 focus:outline-none md:hidden">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+        <nav id="nav-menu" class="header-nav">
+            <ul class="flex space-x-8 text-sm font-medium nav-links">
                 <li><a href="#inicio" class="hover:text-primary">Início</a></li>
                 <li><a href="#quem-somos" class="hover:text-primary">Quem Somos</a></li>
-                <li><a href="#projetos" class="hover:text-primary">Soluções</a></li>
+                <li><a href="#solucoes" class="hover:text-primary">Soluções</a></li>
                 <li><a href="#nossos-projetos" class="hover:text-primary">Nossos Projetos</a></li>
                 <li><a href="#contato" class="hover:text-primary">Contato</a></li>
             </ul>
@@ -81,7 +128,7 @@
     </div>
 </section>
 
-<section id="projetos" class="py-24 bg-secondary">
+<section id="solucoes" class="py-24 bg-secondary">
     <div class="max-w-7xl mx-auto px-6 text-center">
         <h2 class="text-4xl font-bold text-primary mb-12" data-aos="fade-up">Nossas Soluções</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center max-w-4xl mx-auto">
@@ -105,7 +152,7 @@
     <div class="max-w-7xl mx-auto px-6 text-center">
         <h2 class="text-4xl font-bold text-primary mb-12" data-aos="fade-up">Nossos Projetos</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition" data-aos="fade-up">
+            <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition transform hover:scale-105" data-aos="fade-up">
                 <h3 class="text-2xl font-semibold mb-4 text-primary">Dashboard de Vendas</h3>
                 <p class="text-gray-600 mb-6">
                     Acompanhe suas vendas em tempo real, identifique tendências e otimize sua estratégia comercial.
@@ -114,7 +161,7 @@
                     Ver Projeto
                 </a>
             </div>
-            <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition transform hover:scale-105" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="text-2xl font-semibold mb-4 text-primary">Dashboard Financeiro</h3>
                 <p class="text-gray-600 mb-6">
                     Tenha uma visão clara de suas finanças, fluxo de caixa e custos para uma gestão eficaz.
@@ -123,7 +170,7 @@
                     Ver Projeto
                 </a>
             </div>
-            <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition transform hover:scale-105" data-aos="fade-up" data-aos-delay="200">
                 <h3 class="text-2xl font-semibold mb-4 text-primary">Dashboard de RH</h3>
                 <p class="text-gray-600 mb-6">
                     Monitore indicadores de RH, como turnover, absenteísmo e performance da equipe.
@@ -178,7 +225,7 @@
             </a>
             <a href="https://wa.me/5511997567828" target="_blank" class="hover:text-gray-300" aria-label="WhatsApp">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
-                    <path d="M12.04 2C7.05 2 3 6.04 3 11.03c0 1.63.43 3.2 1.23 4.58L3.01 21l5.38-1.42c1.3.76 2.8.97 4.25.97 4.99 0 9.04-4.04 9.04-9.03S17.03 2 12.04 2zm3.32 13.5l-.2-.3c-.6-.29-1.85-.91-2.14-1s-.49-.3-.17-.03c.31.29.5.65.65.83s.33.39.57.44c.24.05.62.2.82.35.2.16.2.12.14-.07-.06-.2-.23-.6-.3-.72s-.25-.19-.35-.26c-.1-.08-.24-.13-.35-.07-.11.06-.18.17-.27.27-.09.11-.19.2-.28.29s-.16.1-.08.25c.08.15.34.52.47.67s.2.18.3.24c.1.06.18.09.28.14.09.05.2.09.29.13.09.04.18.07.28.07s.24.04.4.04s.38-.13.44-.22c.06-.09.12-.22.18-.34s.13-.2.18-.32c.05-.12.1-.24.12-.34.02-.1.04-.2-.04-.32s-.12-.2-.24-.31c-.12-.11-.2-.18-.3-.26z"/>
+                    <path d="M12.04 2C7.05 2 3 6.04 3 11.03c0 1.63.43 3.2 1.23 4.58L3.01 21l5.38-1.42c1.3.76 2.8.97 4.25.97 4.99 0 9.04-4.04 9.04-9.03S17.03 2 12.04 2zm3.32 13.5l-.2-.3c-.6-.29-1.85-.91-2.14-1s-.49-.3-.17-.03c.31.29.5.65.65.83s.33.39.57.44c.24.05.62.2.82.35.2.16.2.12.14-.07-.06-.2-.23-.6-.3-.72s-.25-.19-.35-.26c-.1-.08-.24-.13-.35-.07-.11.06-.18.17-.27.27-.09.11-.19.2-.28.29s-.16.1-.08.25c.08.15.34.52.47.67s.2.18.3.24c.1.06.18.09.28.14c.09.05.2.09.29.13.09.04.18.07.28.07s.24.04.4.04s.38-.13.44-.22c.06-.09.12-.22.18-.34s.13-.2.18-.32c.05-.12.1-.24.12-.34.02-.1.04-.2-.04-.32s-.12-.2-.24-.31c-.12-.11-.2-.18-.3-.26z"/>
                 </svg>
             </a>
         </div>
@@ -190,6 +237,24 @@
   AOS.init({
     duration: 1000,
     once: true,
+  });
+
+  // Lógica do menu hambúrguer
+  const hamburgerButton = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+  const navLinks = navMenu.querySelector('.nav-links');
+
+  hamburgerButton.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // Fechar o menu ao clicar em um link (para mobile)
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+      }
+    });
   });
 </script>
 
